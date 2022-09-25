@@ -1,0 +1,323 @@
+/* fonts  */
+/* pallete found here https://coolors.co/palette/ffffff-00171f-003459-007ea7-00a8e8 */
+@font-face 
+{
+    font-family: 'Oxygen';
+    src: url(Fonts/Oxygen-Regular.ttf);
+}
+/* Variables */
+/* Reset */ 
+/* Fonts */
+/* Tablet stlyes */
+@media screen and (min-width: 960px)
+{
+    /* main 
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }  */
+}
+/* Desktop styles */
+@media screen and (min-width: 1250px)
+{
+    
+}
+/* Clear the settings */
+body, ul, li, h1, h2, a
+{
+    margin: 0;
+    padding: 0;
+    font-family: Oxygen;
+    text-decoration: none;
+}
+li 
+{
+    list-style-type: none;
+}
+body
+{
+    background-color: #ffffff;
+}
+/* header
+{
+    background-image: url('Background.png');
+    margin: 25px; 
+} */
+
+/* base styles */
+.banner img
+{
+    position: flex; /* so that when it resizes it does not cover the other text. maybe put this in grid?
+    /* height: 100%; */
+    width: 100%;
+}
+
+.navbar 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.hamburger 
+{
+    display: none;
+}
+.bar 
+{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    /* background-color: #101010; */
+    background-color: #fe7814;
+}
+.nav-menu 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner .welcome 
+{
+    display: flex;
+    /* background-color: #feb614; */
+    color: rgb(180, 169, 169);
+    padding: 30px;
+    /* position: absolute; */
+    left: 0;
+    top: 10%;
+}
+
+
+.nav-item 
+{
+    margin-left: 5rem;
+}
+.nav-link
+{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+.nav-link:hover
+{
+    color: #482ff7;
+}
+.nav-logo 
+{
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #000000;
+}
+
+.navbar
+{
+    background-color: #00171F;
+    /* position: fixed;
+    top: 0; */
+    /* Instead of a stuck nav bar, make the top right menu pop out to a hovering menu? */
+}
+
+
+a
+{
+    color: white;
+}
+
+.about h2
+{
+    color: #000000;
+}
+
+.welcome h2 
+{
+    color: #ffffff;
+}
+
+.nav-logo
+{
+    color: #00A8E8;
+}
+
+.res
+{
+
+}
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+    body
+    {
+        overflow-x: hidden;
+    }
+
+    .skills
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr;
+        
+    }
+    .skills li
+    {
+        display: inline-block;
+        width: auto;
+        height: 25px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        margin-right: 5px;
+        margin-left: 5px;
+        padding: 5px 10px;
+        color: #36311f;
+        background: #e4e4ea;
+        list-style: none;
+        cursor: default;
+        font-size: 1.2em;
+}
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        /* height: 100%; */
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        z-index: 1;
+        left: 100%;
+        top: 65; /* makes the menu flush with the header */
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    .welcome img
+    {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    h2
+    {
+        /* background-color: #5dafd5;
+        border:solid ; */
+        /* padding: 1rem; */
+    }
+
+    .about
+    {
+        padding: 1em;
+        justify-content: center;
+    }
+
+    img 
+    {
+        padding: 1rem;
+        display: block;
+        margin-left: auto;
+        /* align-self: center; */
+        margin-right: auto;
+        border-radius: 50%;
+        /* justify-content: right; */
+    }
+
+
+    section
+    {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    section.welcome
+    {
+        text-align: center;
+        padding: 1rem;
+        /* background-color:  #518ebda3; */
+        background-color: #003459;;
+        /* background-image: linear-gradient(#518ebda3,rgb(51, 46, 76));  */
+        
+    }
+
+    section.about
+    {
+        /* background-color: #f2f2f5; */
+        /* background-image: linear-gradient(rgb(13, 3, 73),rgb(41, 43, 47)); */
+        /* Use above gradient to make colors flow */
+    }
+
+    section.about p 
+    {
+        color: black;
+    }
+
+    #experience 
+    {
+       background-color: #f2f2f5;
+    }
+
+    #vs, #kl
+    {
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        padding: 15px;
+        border-radius: 3px;
+    }
+
+    .projects
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr; 
+    }
+
+
+    main 
+    {
+        /* for sticky header */
+        /* padding-top: 13%; */
+        display: grid;
+        /* grid-template-columns: 2fr 1fr; */
+        grid-template-rows: 1fr;
+    }
+
+    /* header 
+    {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    } */
+
+}
